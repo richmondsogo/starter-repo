@@ -4,6 +4,10 @@
 > Write them honestly — record what happened, what you discovered, and what remains unresolved.
 > Delete this note in real step documents.
 
+**Step Branch**: `step/00-slug`  
+**Primary Branch**: `main` (or `master`)  
+**Pull Request**: `[PR URL / #]`  
+
 ---
 
 ## Objective
@@ -60,8 +64,13 @@ What was actually verified and how?
 ## Diff / Checkpoint
 
 <!--
-Commit hash or PR reference.
-Summary of what changed.
+Record Git checkpoint details:
+- Pull Request URL:
+- First commit SHA:
+- Last commit SHA:
+- Merge commit SHA:
+- Merge strategy: Standard merge commit (--no-ff)
+- Summary of what changed:
 -->
 
 ## Unresolved Issues

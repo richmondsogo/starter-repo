@@ -82,3 +82,11 @@ Example: for a UI task, use both the `design-system` skill (project-specific tok
 Example: for feature work, use `ask-matt` to orient, `to-spec` to crystallise, and `implement` + `tdd` to build. Close with `code-review`.
 
 If two skills give contradictory instructions, the more specific one takes precedence. Project-local skills take precedence over general skills for project-specific concerns.
+
+---
+
+## Related Documentation
+
+- [`AGENTS.md`](../../AGENTS.md) — Agent working agreement and full resource catalog.
+- [`BUILD_PROTOCOL.md`](../../BUILD_PROTOCOL.md) — 10-stage development methodology and branching/PR rules.
+- [`docs/agents/file-structure.md`](./file-structure.md) — Functional directory layout and placement rules.

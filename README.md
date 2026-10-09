@@ -60,7 +60,7 @@ The full development methodology is in [`BUILD_PROTOCOL.md`](./BUILD_PROTOCOL.md
 The loop is:
 
 ```
-Understand → Plan → Approve → Implement → Verify → Review diff → Record → Checkpoint
+Understand → Plan → Branch → Approve → Implement → Verify → Review diff → Record → PR & Review → Merge & Checkpoint
 ```
 
 ---
@@ -69,8 +69,8 @@ Understand → Plan → Approve → Implement → Verify → Review diff → Rec
 
 | Document | Purpose |
 |---|---|
-| [`AGENTS.md`](./AGENTS.md) | Agent working agreement |
-| [`BUILD_PROTOCOL.md`](./BUILD_PROTOCOL.md) | Full development methodology |
+| [`AGENTS.md`](./AGENTS.md) | Agent working agreement & resource catalog |
+| [`BUILD_PROTOCOL.md`](./BUILD_PROTOCOL.md) | 10-stage development methodology & PR workflow |
 | [`CONTEXT.md`](./CONTEXT.md) | Project domain, users, constraints, non-goals |
 | [`DESIGN.md`](./DESIGN.md) | Design principles and rules |
 
@@ -82,6 +82,7 @@ Understand → Plan → Approve → Implement → Verify → Review diff → Rec
 |---|---|
 | `docs/adr/` | Architecture Decision Records |
 | `docs/steps/` | Step-by-step engineering log |
+| `docs/agents/file-structure.md` | Functional directory layout and placement rules |
 | `docs/agents/skills.md` | Available skills |
 | `docs/agents/mcps.md` | Available MCPs |
 | `docs/agents/issue-tracker.md` | Issue tracking approach |

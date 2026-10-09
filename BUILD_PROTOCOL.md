@@ -41,6 +41,8 @@ Understand
     ↓
 Plan
     ↓
+Branch
+    ↓
 Approve
     ↓
 Implement
@@ -51,28 +53,41 @@ Review diff
     ↓
 Record
     ↓
-Checkpoint
+PR & Review
+    ↓
+Merge & Checkpoint
 ```
 
 **Understand** — Read existing code, documentation, and constraints before forming an opinion.
 
-**Plan** — Write a numbered plan. Surface uncertainties. Make the scope explicit.
+**Plan** — Write a numbered plan. Surface uncertainties. Make the scope explicit in a step document (`docs/steps/NN-<slug>.md`).
+
+**Branch** — Create an isolated step branch (`step/NN-<slug>`) from the latest primary branch (`main`, fallback `master`). Never implement directly on the primary branch.
 
 **Approve** — Confirm the plan with the human before modifying files.
 
-**Implement** — Execute the approved plan. One scope at a time.
+**Implement** — Execute the approved plan on the isolated step branch. One scope at a time.
 
-**Verify** — Run tests, checks, and visual inspection. Do not skip this.
+**Verify** — Run tests, checks (`scripts/verify.ps1`), and visual inspection. Do not skip this.
 
 **Review diff** — Run `git diff`. Read every changed line. Confirm no unintended changes exist.
 
-**Record** — Update or create the relevant step log in `docs/steps/`. Record discoveries and decisions.
+**Record** — Update the step log in `docs/steps/NN-<slug>.md`. Record discoveries, decisions, and verification proof.
 
-**Checkpoint** — Commit with a clear, descriptive message.
+**PR & Review** — Push the branch and open a Pull Request targeting the primary branch. Conduct diff review (using the `code-review` skill).
+
+**Merge & Checkpoint** — Land the PR into the primary branch via a standard merge commit (`--no-ff`) to preserve full granular commit history. Record the PR URL, first commit SHA, last commit SHA, and merge commit SHA in the step document.
 
 ---
 
 ## Important rules
+
+### Branching and Pull Requests
+
+- **Protect the primary branch**: Explicitly prefer `main`. If `main` exists, target `main`; otherwise, fall back to `master`. Direct commits to the primary branch are strictly prohibited.
+- **Step branches**: Every step operates on an isolated subbranch named `step/NN-<slug>` (e.g., `step/01-auth-flow`).
+- **Standard merge commits (`--no-ff`)**: PRs must merge with a standard merge commit (`git merge --no-ff`) rather than squashing or rebasing. This preserves the complete commit history and narrative on the primary branch.
+- **Provenance tracking**: Every completed step log in `docs/steps/` must record the PR URL, first commit SHA, last commit SHA, and merge commit SHA.
 
 ### Planning
 
@@ -111,6 +126,11 @@ Checkpoint
 
 - Write commit messages that explain what changed and why.
 - Keep the history navigable. A reader should be able to follow the evolution of the project.
+
+### File structure
+
+- Adhere to the directory conventions defined in `docs/agents/file-structure.md`.
+- Never place loose test scripts, scratchpads, or temporary dumps at the repository root.
 
 ### Infrastructure
 

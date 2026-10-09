@@ -2,7 +2,7 @@
 
 **Step Branch**: `step/01-agent-governance-and-workflow`  
 **Primary Branch**: `main` (or `master`)  
-**Pull Request**: `[Pending PR]`  
+**Pull Request**: [#1](https://github.com/richmondsogo/starter-repo/pull/1)  
 
 ---
 
@@ -52,10 +52,10 @@ Establish repository-wide agent governance by equipping `AGENTS.md` with an exha
 
 ## Diff / Checkpoint
 
-- Pull Request URL: [Pending PR creation]
-- First commit SHA: 14fa02e (initial implementation)
-- Last commit SHA: 14fa02e
-- Merge commit SHA: [Pending merge]
+- Pull Request URL: https://github.com/richmondsogo/starter-repo/pull/1
+- First commit SHA: `43743f9`
+- Last commit SHA: `43743f9`
+- Merge commit SHA: `f252bef`
 - Merge strategy: Standard merge commit (`--no-ff`)
 
 ## Unresolved Issues
